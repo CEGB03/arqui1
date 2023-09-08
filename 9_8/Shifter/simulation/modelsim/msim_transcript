@@ -1,0 +1,46 @@
+# Reading D:/Programacion/Programas/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Shifter_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/Programacion/Programas/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Programacion/Arqui1/9_8 {D:/Programacion/Arqui1/9_8/Shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:27:13 on Sep 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Programacion/Arqui1/9_8" D:/Programacion/Arqui1/9_8/Shifter.sv 
+# -- Compiling module Shifter
+# 
+# Top level modules:
+# 	Shifter
+# End time: 09:27:13 on Sep 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim rtl_work.Shifter
+# vsim rtl_work.Shifter 
+# Start time: 09:27:25 on Sep 08,2023
+# Loading sv_std.std
+# Loading rtl_work.Shifter
+add wave -position end  sim:/Shifter/H
+add wave -position end  sim:/Shifter/IL
+add wave -position end  sim:/Shifter/IR
+add wave -position end  sim:/Shifter/F
+add wave -position end  sim:/Shifter/S
+force -freeze sim:/Shifter/H 00 0
+force -freeze sim:/Shifter/F 1101 0
+force -freeze sim:/Shifter/IL 1 0
+force -freeze sim:/Shifter/IR 0 0
+run
+force -freeze sim:/Shifter/H 01 0
+run
+force -freeze sim:/Shifter/H 10 0
+run
+force -freeze sim:/Shifter/H 11 0
+run
+# End time: 10:09:39 on Sep 08,2023, Elapsed time: 0:42:14
+# Errors: 0, Warnings: 0

@@ -1,0 +1,37 @@
+|ram3port
+clk => mem.we_a.CLK
+clk => mem.waddr_a[1].CLK
+clk => mem.waddr_a[0].CLK
+clk => mem.data_a[3].CLK
+clk => mem.data_a[2].CLK
+clk => mem.data_a[1].CLK
+clk => mem.data_a[0].CLK
+clk => mem.CLK0
+we3 => mem.we_a.DATAIN
+we3 => mem.WE
+a1[0] => mem.RADDR
+a1[1] => mem.RADDR1
+a2[0] => mem.PORTBRADDR
+a2[1] => mem.PORTBRADDR1
+a3[0] => mem.waddr_a[0].DATAIN
+a3[0] => mem.WADDR
+a3[1] => mem.waddr_a[1].DATAIN
+a3[1] => mem.WADDR1
+d1[0] <= mem.DATAOUT
+d1[1] <= mem.DATAOUT1
+d1[2] <= mem.DATAOUT2
+d1[3] <= mem.DATAOUT3
+d2[0] <= mem.PORTBDATAOUT
+d2[1] <= mem.PORTBDATAOUT1
+d2[2] <= mem.PORTBDATAOUT2
+d2[3] <= mem.PORTBDATAOUT3
+d3[0] => mem.data_a[0].DATAIN
+d3[0] => mem.DATAIN
+d3[1] => mem.data_a[1].DATAIN
+d3[1] => mem.DATAIN1
+d3[2] => mem.data_a[2].DATAIN
+d3[2] => mem.DATAIN2
+d3[3] => mem.data_a[3].DATAIN
+d3[3] => mem.DATAIN3
+
+
