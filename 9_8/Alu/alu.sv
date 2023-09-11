@@ -48,7 +48,7 @@ module alu#(parameter N=4)
 		// en el ppt son  v(overflow) y c(acarreo)
 		assign acarreo = (ALUControl[3] == 1'b0) && cout;
 		assign overflow = (ALUControl[3] == 1'b0) &&//Parte aritmetica, no importa v en logica
-							   (~a[N-1] & ~y[N-1] &  sum[N-1] + // Suma de positivos
+							   (~a[N-1] & ~y[N-1] &  sum[N-1] | // Suma de positivos
 							     a[N-1] &  y[N-1] & ~sum[N-1]); // Suma de negativos
 		//							 v    	s		z		c
 		assign ALUFlags = {overflow, neg, zero, acarreo};
