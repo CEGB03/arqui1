@@ -1,0 +1,66 @@
+# Reading D:/Programacion/Programas/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do unidadprocesadora_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/Programacion/Programas/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Programacion/Arqui1/9_15/UnidadProcesadora {D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:48:12 on Sep 15,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Programacion/Arqui1/9_15/UnidadProcesadora" D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv 
+# -- Compiling module unidadprocesadora
+# -- Compiling module alu
+# -- Compiling module Shifter2
+# -- Compiling module ram3port
+# 
+# Top level modules:
+# 	unidadprocesadora
+# End time: 10:48:12 on Sep 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim rtl_work.unidadprocesadora
+# vsim rtl_work.unidadprocesadora 
+# Start time: 10:48:17 on Sep 15,2023
+# Loading sv_std.std
+# Loading rtl_work.unidadprocesadora
+# Loading rtl_work.ram3port
+# Loading rtl_work.alu
+# Loading rtl_work.Shifter2
+# ** Warning: (vsim-3015) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(27): [PCDPC] - Port size (2) does not match connection size (3) for port 'a1'. The port definition is at: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(125).
+#    Time: 0 ps  Iteration: 0  Instance: /unidadprocesadora/files File: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv
+# ** Warning: (vsim-3015) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(27): [PCDPC] - Port size (2) does not match connection size (3) for port 'a2'. The port definition is at: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(125).
+#    Time: 0 ps  Iteration: 0  Instance: /unidadprocesadora/files File: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv
+# ** Warning: (vsim-3015) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(27): [PCDPC] - Port size (2) does not match connection size (3) for port 'a3'. The port definition is at: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(125).
+#    Time: 0 ps  Iteration: 0  Instance: /unidadprocesadora/files File: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv
+# ** Warning: (vsim-3017) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(35): [TFMPC] - Too few port connections. Expected 5, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /unidadprocesadora/corrimiento File: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv
+# ** Warning: (vsim-3015) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(35): [PCDPC] - Port size (1) does not match connection size (4) for port 'IL'. The port definition is at: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(108).
+#    Time: 0 ps  Iteration: 0  Instance: /unidadprocesadora/corrimiento File: D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv
+# ** Warning: (vsim-3722) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(35): [TFMPC] - Missing connection for port 'IR'.
+# ** Warning: (vsim-3722) D:/Programacion/Arqui1/9_15/UnidadProcesadora/unidadprocesadora.sv(35): [TFMPC] - Missing connection for port 'S'.
+add wave -position end  sim:/unidadprocesadora/ctr_word
+add wave -position end  sim:/unidadprocesadora/clk
+add wave -position end  sim:/unidadprocesadora/we3
+add wave -position end  sim:/unidadprocesadora/stateBits
+add wave -position end  sim:/unidadprocesadora/busA
+add wave -position end  sim:/unidadprocesadora/busB
+add wave -position end  sim:/unidadprocesadora/DATA_in
+add wave -position end  sim:/unidadprocesadora/DATA_out
+add wave -position end  sim:/unidadprocesadora/ALUFlags0
+force -freeze sim:/unidadprocesadora/ctr_word 0010010100010001 0
+force -freeze sim:/unidadprocesadora/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/unidadprocesadora/we3 1 0
+force -freeze sim:/unidadprocesadora/busA 1010 0
+force -freeze sim:/unidadprocesadora/busB 0110 0
+force -freeze sim:/unidadprocesadora/DATA_in 0010 0
+add wave -position end  sim:/unidadprocesadora/F
+add wave -position end  sim:/unidadprocesadora/f
+run
+# End time: 11:02:00 on Sep 15,2023, Elapsed time: 0:13:43
+# Errors: 0, Warnings: 7

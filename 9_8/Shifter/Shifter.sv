@@ -17,7 +17,7 @@ endmodule
 module Shifter2 #(parameter N=4)(
 					input logic [N-1:0] F,
 					input logic [1:0] H,
-					input logic IL, IR,
+					//input logic IL, IR,
 					output logic [N-1:0] S);
 	always_comb
 	case(H)
