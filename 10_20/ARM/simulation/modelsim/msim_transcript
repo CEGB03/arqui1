@@ -1,0 +1,40 @@
+# Reading D:/Programacion/Programas/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do arm_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/Programacion/Programas/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Programacion/Arqui1/10_20/ARM {D:/Programacion/Arqui1/10_20/ARM/arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:49:22 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Programacion/Arqui1/10_20/ARM" D:/Programacion/Arqui1/10_20/ARM/arm.sv 
+# -- Compiling module top
+# -- Compiling module dmem
+# -- Compiling module imem
+# -- Compiling module arm
+# -- Compiling module controller
+# -- Compiling module decode
+# -- Compiling module condlogic
+# -- Compiling module condcheck
+# -- Compiling module datapath
+# -- Compiling module regfile
+# -- Compiling module extend
+# -- Compiling module alu
+# -- Compiling module adder
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module mux2
+# -- Compiling module cmp2
+# -- Compiling module port
+# 
+# Top level modules:
+# 	top
+# End time: 10:49:22 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

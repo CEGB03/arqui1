@@ -1,0 +1,16 @@
+Fitter Status : Failed - Fri Oct 20 11:00:14 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : arm
+Top-level Entity Name : arm
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 1,561 / 22,320 ( 7 % )
+    Total combinational functions : 1,081 / 22,320 ( 5 % )
+    Dedicated logic registers : 516 / 22,320 ( 2 % )
+Total registers : 516
+Total pins : 164 / 154 ( 106 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
