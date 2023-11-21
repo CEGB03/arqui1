@@ -1,0 +1,64 @@
+// Secuencia "Choque de Poderes" desarrollada por tabla
+
+00000081 --> * - - - - - - *    00000001 --> - - - - - - - *
+00000042 --> - * - - - - * -    00000003 --> - - - - - - * *
+00000024 --> - - * - - * - -    00000007 --> - - - - - * * *
+00000018 --> - - - * * - - -    0000000F --> - - - - * * * *
+0000000C --> - - - - * * - -    0000001F --> - - - * * * * *
+00000018 --> - - - * * - - -    0000003F --> - - * * * * * *
+00000030 --> - - * * - - - -    0000007F --> - * * * * * * *
+00000060 --> - * * - - - - -    000000FF --> * * * * * * * *
+00000030 --> - - * * - - - -    000000FE --> * * * * * * * -
+00000018 --> - - - * * - - -    000000FC --> * * * * * * - -
+0000000C --> - - - - * * - -    000000F8 --> * * * * * - - -
+00000006 --> - - - - - * * -    000000F0 --> * * * * - - - -
+00000018 --> - - - * * - - -    000000E0 --> * * * - - - - -
+00000006 --> - - - - - * * -    000000C0 --> * * - - - - - -
+00000003 --> - - - - - - * *    00000080 --> * - - - - - - -
+
+/----------------------------------------------------------------------------------/
+/------------------------------- Choque de Poderes --------------------------------/
+/----------------------------------------------------------------------------------/
+
+sel3:       AND     R2, R1, #0x04      ; E2012004 ; Movemos un 4 a R2
+            STR     R2, [R0, #0x800]   ; E5802800 ; Sacamos al puerto la luz 3, correspondiente a la opcion elegida
+
+vuelta:     ADD     R3, R0, #2         ; E2803002 ; Movemos un 2 al registro R3, contador para el bucle de lectura
+
+lectura:    SUBS    R3, R3, #1         ; E2533001 ; Restamos uno al contador y actualizamos banderas
+            LDR     R1, [R0, #0x800]   ; E5901800 ; Leemos el puerto, guardando en R1 los valores de los switches y del key_1
+            BNE     lectura            ; 1AFFFFFC ;
+
+            ANDS    R2, R1, #0x10      ; E2112010 ; Primer mascara, verificamos pin E1 apagado (boton presionado)
+            BEQ     sec3               ; 0A000048 ;
+
+            ANDSNE  R2, R1, #0x04      ; 12112004 ; Segunda mascara, verificamos pin B9 apagado
+            BEQ     inicio             ; 0AFFFFCA ;
+            BNE     vuelta             ; 1AFFFFF6 ; Si el pin M1 sigue encendido, esperamos a E1 apagado o M1 apagado
+
+/----------------------------------------------------------------------------------/
+
+ADD 	R4, R0, #0x1f
+ADD 	R5, R0, #0x30
+LDR 	R2, [R5]
+STR 	R2, [R0, #0x800]
+LDR 	R9, [R0, #4]
+SUBS 	R9, R9, #1
+BNE 	#0x208
+ADD 	R5, R5, #4
+SUBS	R4, R4, #1
+ADDEQ 	R4, R0, #0x1f
+ADDEQ 	R5, R0, #0x30
+ADD 	R3, R0, #2
+SUBS 	R3, R3, #1
+LDR 	R1, [R0, #0x800]
+BNE 	#0x224
+ANDS 	R1, R1, #4
+BEQ 	#4
+BNE 	#0x1fc
+
+
+
+
+
+
